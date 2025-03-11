@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import SplitType from "split-type";
 import styled from "styled-components";
 
-import ApprochIMG from "../../../assets/Images/ApporchIMG.png";
+import ApprochIMG from "../../../assets/portfolio/rizvi.png";
 
 const Container = styled.div`
   margin-top: 8rem;

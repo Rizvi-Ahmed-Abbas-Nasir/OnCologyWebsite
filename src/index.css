@@ -457,6 +457,347 @@ body {
 }
 
 
+.annotation-label {
+  background: black;
+  color: white;
+  padding: 4px;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s, transform 0.2s ease;
+  border: 1px solid white;
+  position: relative;
+  transform: translate(-50%, -50%);
+}
+
+.annotation-label:hover {
+  background: white;
+  color: black;
+  transform: scale(1.2);
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  font-size: 14px;
+  padding: 1rem;
+  border-radius: 8px;
+  white-space: normal;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  width: 650px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  transform: translate(-50%, -100%); /* Adjusted to prevent excessive upward movement */
+  top: 100%; /* Ensures tooltip appears directly above the annotation */
+  left: 50%;
+}
+
+/* Tooltip Arrow */
+.tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -8px; /* Places the arrow at the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.9) transparent transparent transparent;
+}
+
+/* Tooltip Title */
+.tooltip-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 4px;
+}
+
+/* Tooltip Description */
+.tooltip-description {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+
+
+/* Container */
+.steps-container {
+  min-height: 100vh;
+  margin-top: 3rem;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.steps-wrapper {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
+}
+
+/* Sidebar Section */
+.steps-sidebar {
+  width: 70rem;
+  display: none;
+  flex-direction: column;
+  padding: 3rem 0;
+  position: sticky;
+  top: 0;
+}
+
+@media (min-width: 768px) {
+  .steps-sidebar {
+    display: flex;
+  }
+}
+
+.steps-title {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+.title-large {
+  font-size: 1.4rem;
+}
+
+@media (min-width: 768px) {
+  .title-large {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title-large {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .title-large {
+    font-size: 3rem;
+  }
+}
+
+.title-small {
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .title-small {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title-small {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .title-small {
+    font-size: 3rem;
+  }
+}
+
+.steps-description {
+  font-size: 0.8rem;
+  color: #000000;
+}
+
+@media (min-width: 768px) {
+  .steps-description {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+.chart_section {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: #181717;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.chart_section h3 {
+  color: white;
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.chart-title {
+  font-size: 1.875rem;
+  color: white;
+  font-weight: bold;
+}
+
+.chart-controls {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.chart-controls button {
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.chart-controls button.active {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.chart-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 5rem;
+}
+
+@media (max-width: 1024px) {
+  .chart-container {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .chart-container {
+    padding: 1rem;
+  }
+  .chart-controls {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+/* Steps Content */
+.steps-content {
+  width: 100%;
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+
+.step-card {
+  background-color: #000000;
+  border-radius: 3rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 45rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .step-card {
+    flex-direction: row;
+    max-width: 20rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .step-card {
+    height: 47vh;
+    max-width: 45rem;
+  }
+}
+
+/* Step Label */
+.step-label {
+  display: inline-block;
+  background-color: #2e2e2e;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 0.5rem;
+}
+
+/* Step Title */
+.step-title {
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .step-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .step-title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .step-title {
+    font-size: 3rem;
+  }
+}
+
+/* Step Text */
+.step-text {
+  color: #ffffff;
+  margin-top: 0.5rem;
+}
+
+/* Button */
+.step-button {
+  margin-top: 1rem;
+  background-color: #1a1a1a;
+  color: white;
+  border:#000;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.step-button:hover {
+  background-color: #2563eb;
+}
+
+
+
 .loader-container {
   position: absolute;
   inset: 0;

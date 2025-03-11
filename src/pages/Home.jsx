@@ -6,15 +6,15 @@ import SplitType from "split-type";
 import RouteTransition from "../components/RouteTransition";
 import Brands from "../components/Brands";
 import Services from "../components/Sections/home/Services";
-import About from "../components/Sections/home/About";
-import Rizvi from "../components/Sections/home/Rizvi";
+import ChartSection from "../components/ChartSection";
 
 import PortfolioSection from "../components/Sections/home/PortfolioSection";
 import { useContextProvider } from "../utils/GlobleContextProvider";
 import Marquee from "../components/Marquee";
 import Approch from "../components/Sections/home/Approch";
 import { Link, useNavigate } from "react-router-dom";
-import FrontPage from "../components/CarModel"
+import CarModel from "../components/CarModel"
+import About from "../components/ScrollableCards"
 const Container = styled.div``;
 
 const Hero = styled.div`
@@ -307,10 +307,11 @@ const Home = () => {
             </div>
           </ShowReel>
         </Hero> */}
-        <FrontPage />
+        <CarModel />
      
         <Approch />
-        <Brands />
+        <About />
+        <ChartSection />  
         <Marquee />
       </Container>
     </RouteTransition>
