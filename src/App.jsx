@@ -9,18 +9,13 @@ import gsap from "gsap";
 import { ToastContainer } from "react-toastify";
 import { Toaster } from "react-hot-toast";
 import "react-toastify/dist/ReactToastify.css";
-import Maintenance from "./pages/maintenance"
-import Carrier from "./pages/Carrier"
 
 
 //Pages
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Team from "./pages/Team";
-import Quote from "./pages/Quote";
+
 
 // Components
-import Portfolio from "./pages/Portfolio";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Cursor from "./components/CustomCursor";
@@ -28,7 +23,6 @@ import Cursor from "./components/CustomCursor";
 //Css
 import "./App.scss";
 import Preloader from "./components/Preloader";
-import Services from "./pages/Services";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -92,13 +86,7 @@ function App() {
       <AnimatePresence initial={false} mode={"wait"}>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
-          <Route path="/aboutus" element={<About />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/quote" element={<Quote />} />
-          <Route path="/maintenance" element={<Maintenance />} />
-          <Route path="/Careers" element={<Carrier />} />
+        
 
         </Routes>
       </AnimatePresence>

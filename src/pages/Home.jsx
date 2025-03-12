@@ -4,11 +4,8 @@ import styled from "styled-components";
 import { FaArrowRight } from "react-icons/fa";
 import SplitType from "split-type";
 import RouteTransition from "../components/RouteTransition";
-import Brands from "../components/Brands";
-import Services from "../components/Sections/home/Services";
 import ChartSection from "../components/ChartSection";
 
-import PortfolioSection from "../components/Sections/home/PortfolioSection";
 import { useContextProvider } from "../utils/GlobleContextProvider";
 import Marquee from "../components/Marquee";
 import Approch from "../components/Sections/home/Approch";
