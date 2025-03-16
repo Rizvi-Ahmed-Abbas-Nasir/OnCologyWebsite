@@ -955,6 +955,401 @@ body {
 
 }
 
+
+
+.spectacledcoder-expanding-cards-container
+{
+    margin: auto;
+    width: 500px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    padding-left: 30px;
+    border-radius: 70px;
+    zoom: 0.7;
+}
+.spectacledcoder-cards
+{
+    margin: auto;
+    display: flex;
+    width: 90%;
+    height: 90%;
+    border-radius: 50px;
+    align-items: center;
+}
+.spectacledcoder-cards .card
+{
+    position: absolute;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+    border-radius: 60px;
+    background-color: black;
+    border-left: 1px solid #ffd399;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px rgba(255, 186, 49, 0.226);
+    z-index: 150;
+} 
+.spectacledcoder-cards .card:hover
+{
+    box-shadow: -20px -20px 0px rgba(255, 186, 49, 0.226);
+    transition: box-shadow 1s;
+}
+.spectacledcoder-cards .card:first-child
+{
+    background-color: #ffac40;
+    background-image: url("https://img.icons8.com/pastel-glyph/100/beefburger.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.spectacledcoder-cards .card:nth-child(2)
+{
+    background-color: #ffac40;
+    margin-left: 50px;
+    background-image: url("https://img.icons8.com/external-flatart-icons-solid-flatarticons/100/external-chicken-leg-grocery-flatart-icons-solid-flatarticons-2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.spectacledcoder-cards .card:nth-child(3)
+{
+    background-color: #ffac40;
+    margin-left: 100px;
+    background-image: url("https://img.icons8.com/stamp/100/salami-pizza.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.spectacledcoder-cards .card:last-child
+{
+    background-color: #ffac40;
+    margin-left: 150px;
+    background-image: url("https://img.icons8.com/pastel-glyph/100/chupa-chups.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.spectacledcoder-cards .card h2
+{
+    margin: auto;
+    margin-top: 30px;
+    margin-left: 30px;
+    color: white;
+} 
+.spectacledcoder-cards .card .bigsquare
+{
+    margin: auto;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    width: 90px;
+    height: 90px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    z-index: 30;
+}
+.spectacledcoder-cards .card .bigsquare .col
+{
+    margin: auto;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.spectacledcoder-cards .card .bigsquare .col .sq1
+{
+    margin: auto;
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 40px;
+    height: 40px;
+    background-color: #ffac40;
+    display: flex;
+}
+.spectacledcoder-cards .card .bigsquare .col .sq1 .cl1 
+{
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 100% 0% 100% 0% / 100% 100% 0% 0%  ;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+}
+.spectacledcoder-cards .card .bigsquare .col .sq2
+{
+    margin: auto;
+    margin-bottom: 0px;
+    margin-left: -40px;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+}
+.spectacledcoder-cards .card .bigsquare .col .sq2 .cl2 
+{
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 100% 0% 100% 0% / 0% 0% 100% 100% ;
+    background-color: #ffac40;
+    display: flex;
+}
+.spectacledcoder-cards .card .bigsquare .col .sq3
+{
+    margin: auto;
+    margin-top: -40px;
+    margin-right: 0px;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+}
+.spectacledcoder-cards .card .bigsquare .col .sq3 .cl3
+{
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 100% 0% 100% 0% / 0% 0% 100% 100% ;
+    background-color: #ffac40;
+    display: flex;
+}
+.spectacledcoder-cards .card .sq4
+{
+    position: absolute;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    width: 0px;
+    height: 0px;
+    background-color: #ffac40;
+    display: flex;
+    border-radius: 30%;
+    z-index: 50;
+    opacity: 0;
+}
+.spectacledcoder-cards .card:hover .sq4
+{
+
+    transform: translateX(90px) translateY(90px);
+    width: 40px;
+    height: 40px;
+    opacity: 100;
+    transition: all 0.7s;
+}
+.spectacledcoder-cards .card .sq4 img
+{
+    margin: auto;
+    rotate: -45deg;
+    width: 0px;
+    height: 0px;
+}
+.spectacledcoder-cards .card:hover .sq4 img
+{
+
+    width: 40px;
+    height: 40px;
+    transition: all 1s;
+}
+.expanding-btn 
+{
+    width: 60px;
+    height: 100px;
+    margin: auto;
+    margin-right: -15px;
+    display: flex;
+    flex-direction: column;
+}
+.expanding-btn .square1
+{
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    margin-right: -5px;
+    margin-bottom: -6px;
+    background-color: rgb(255, 255, 255);
+}
+.expanding-btn .square1 .circle1
+{
+    width: 20px;
+    height: 20px;
+    border-radius: 100% 0% 26% 74% / 0% 100% 0% 100%   ;
+    background-color: rgba(255, 179, 26, 0.489);
+}
+.expand-btn-container
+{
+    margin: auto;
+    margin-right: -15px;
+    width: 61px;
+    height: 61px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    z-index: 150;
+    display: flex;
+}
+.expand-btn-container img
+{
+    margin: auto;
+    margin-right: 5px;
+    z-index: 150;
+}
+.expanding-btn .square2
+{
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    margin-right: -5px;
+    margin-top: -5px;
+    background-color: rgb(255, 255, 255);
+}
+.expanding-btn .square2 .circle2
+{
+    width: 20px;
+    height: 20px;
+    border-radius: 74% 26% 0% 100% / 100% 0% 100% 0%  ;
+    background-color: rgba(255, 179, 26, 0.489);
+}
+
+@media only screen and (max-width: 700px) 
+{
+    body 
+    {
+        height: 100vh;
+        max-height: 100%;
+    }
+    .spectacledcoder-expanding-cards-container
+    {
+        margin: auto;
+        width: 80%;
+        height: 400px;
+        flex-direction: column;
+        padding-left: 0px;
+    } 
+    .spectacledcoder-cards
+    {
+        margin: auto;
+        flex-direction: column;
+        justify-content: start;
+        margin-top: 50px;
+    }
+    .spectacledcoder-cards .card
+    {
+        border-top: 1px solid #ffd399;
+        zoom: 0.6;
+    }
+    .spectacledcoder-cards .card:first-child
+    {
+        background-color: #ffac40;
+        background-image: url("https://img.icons8.com/pastel-glyph/100/beefburger.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-left: 0px;
+        
+    }
+    .spectacledcoder-cards .card:nth-child(2)
+    {
+        background-color: #ffac40;
+        margin-top: 50px;
+        background-image: url("https://img.icons8.com/ios-filled/100/kfc-chicken.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-left: 0px;
+    }
+    .spectacledcoder-cards .card:nth-child(3)
+    {
+        background-color: #ffac40;
+        margin-top: 100px;
+        background-image: url("https://img.icons8.com/external-tal-revivo-bold-tal-revivo/100/external-dominos-an-american-multinational-pizza-restaurant-chain-food-bold-tal-revivo.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-left: 0px;
+    }
+    .spectacledcoder-cards .card:last-child
+    {
+        background-color: #ffac40;
+        margin-top: 150px;
+        background-image: url("https://img.icons8.com/stamp/100/salami-pizza.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-left: 0px;
+    }
+    .expanding-btn 
+    {
+        width: 100px;
+        height:  100px;
+        flex-direction: row;
+        margin: auto !important;
+    }
+    .expanding-btn .square1
+    {
+        margin: auto;
+        margin-bottom: -20px;
+        margin-right: -5px;
+    }
+    .expanding-btn .square1 .circle1
+    {
+        width: 20px;
+        height: 20px;
+        border-radius: 0% 100% 0% 100% / 100% 74% 26% 0% ;
+        background-color: rgba(255, 179, 26, 0.489);
+    }
+    .expand-btn-container
+    {
+        margin: auto;
+        margin-bottom: -30px;
+    }
+    .expand-btn-container img
+    {
+        margin: auto;
+        rotate: 90deg;
+        margin-bottom: 5px;
+        z-index: 150;
+    }
+    .expanding-btn .square2
+    {
+        margin: auto;
+        margin-left: -5px;
+        margin-bottom: -20px;
+    }
+    .expanding-btn .square2 .circle2
+    {
+        width: 20px;
+        height: 20px;
+        border-radius: 100% 0% 100% 0% / 74% 100% 0% 26% ;
+        background-color: rgba(255, 179, 26, 0.489);
+    }
+    .disclaimer
+    {
+        top: 0;
+    }
+ 
+}
+.disclaimer
+{
+    position: absolute;
+    bottom: 0px; 
+    left: 0; 
+    margin-left: auto; 
+    right: 0; 
+    margin-right: auto; 
+    width: fit-content;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Belanosima', sans-serif;
+}
+.disclaimer a
+{
+    text-decoration: none;
+    color: #202020;
+    font-weight: 900;
+}
+.disclaimer a:hover
+{
+    text-decoration: overline;
+}
+
 /* $$ */
 /* $$ */
 

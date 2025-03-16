@@ -164,30 +164,18 @@ const SocialLinks = styled.div`
 
 const Links = [
   {
-    title: "Home",
+    title: "Our Most Efficient Model",
     href: "/",
   },
   {
-    title: "About Us",
+    title: "Thinking Model",
     href: "/aboutus",
   },
   {
-    title: "Our Team",
+    title: "Image Generations",
     href: "/team",
   },
-  {
-    title: "Services",
-    href: "/services",
-  },
-  {
-    title: "Portfolio",
-    href: "/portfolio",
-  },
-  
-  {
-    title: "Contact Us",
-    href: "/quote",
-  },
+ 
 ];
 
 const SocialLink = [

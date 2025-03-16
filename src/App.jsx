@@ -19,6 +19,10 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Cursor from "./components/CustomCursor";
+import Form from "./components/Form";
+
+
+
 
 //Css
 import "./App.scss";
@@ -86,6 +90,11 @@ function App() {
       <AnimatePresence initial={false} mode={"wait"}>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
+          <Route path="/DDForm" element={<Form />} />
+
+
+
+        
         
 
         </Routes>

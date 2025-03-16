@@ -108,9 +108,9 @@ export default function ChartSection() {
   return (
     <div ref={containerRef} className="chart-container">
       <div className="chart_section">
-        <h3>Miles India</h3>
+        <h3>OnCology </h3>
         <p>
-            <span className="chart-title">Miles India Chart</span>
+            <span className="chart-title">People Death's</span>
           </p>
 
         {/* Buttons and Title */}

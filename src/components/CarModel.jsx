@@ -114,6 +114,12 @@ const HumanModel = ({ setSelectedSection, setHoveredSection, hoveredSection }) =
     }
   });
 
+  useFrame((_state, delta) => {
+    if (modelRef.current) {
+      modelRef.current.rotation.y += delta * 0.5;
+    }
+  });
+
   const handleClick = (annotation) => {
     setSelectedSection(annotation);
     camera.position.lerp(
