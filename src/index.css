@@ -456,7 +456,6 @@ body {
   }
 }
 
-
 .annotation-label {
   background: black;
   color: white;
@@ -480,7 +479,6 @@ body {
 .annotation-label:hover {
   background: white;
   color: black;
-  transform: scale(1.2);
 }
 
 /* Tooltip */
@@ -488,27 +486,38 @@ body {
   position: absolute;
   background: rgba(0, 0, 0, 0.9);
   color: white;
-  font-size: 14px;
+  font-size: 15px;
   padding: 1rem;
   border-radius: 8px;
   white-space: normal;
   pointer-events: none;
-  transition: opacity 0.3s ease-in-out;
-  width: 650px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  width: 550px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   text-align: left;
   transform: translate(-50%, -100%); /* Adjusted to prevent excessive upward movement */
-  top: 100%; /* Ensures tooltip appears directly above the annotation */
-  left: 50%;
+  top: 200%; /* Ensures tooltip appears directly above the annotation */
+  left: 25rem;
+  animation: fadeUp 0.3s ease-in-out forwards; 
 }
 
-/* Tooltip Arrow */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 20px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -100%); 
+  }
+}
+
 .tooltip::after {
   content: "";
   position: absolute;
   bottom: -8px; /* Places the arrow at the bottom */
   left: 50%;
-  transform: translateX(-50%);
   border-width: 8px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.9) transparent transparent transparent;
@@ -529,6 +538,7 @@ body {
   font-size: 14px;
   line-height: 1.4;
 }
+
 
 
 
@@ -1326,6 +1336,9 @@ body {
     }
  
 }
+
+
+
 .disclaimer
 {
     position: absolute;
@@ -1352,6 +1365,8 @@ body {
 
 /* $$ */
 /* $$ */
+
+
 
 /* Content Page */
 /* About ME */

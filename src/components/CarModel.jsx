@@ -61,7 +61,7 @@ const HumanModel = ({ setSelectedSection, setHoveredSection, hoveredSection }) =
     { 
       id: 1, 
       position: new Vector3(0, 1.6, 0), 
-      details: "Brain: The command center of the body, responsible for processing sensory information, controlling movement, regulating emotions, and enabling cognition, memory, and reasoning." 
+      details: "Brain: The brain is the central organ of the human nervous system, responsible for controlling thoughts, memory, emotion, touch, motor skills, vision, breathing, and regulating all body functions. The brain is divided into three main parts: the cerebrum, the cerebellum, and the brainstem. The cerebrum controls conscious thought, the cerebellum coordinates movement, and the brainstem manages basic functions like heart rate and breathing." 
     },
     { 
       id: 2, 
@@ -70,12 +70,12 @@ const HumanModel = ({ setSelectedSection, setHoveredSection, hoveredSection }) =
     },
     { 
       id: 3, 
-      position: new Vector3(0, 1, 0), 
+      position: new Vector3(0, 1.1, 0), 
       details: "Liver: A vital organ responsible for detoxifying harmful substances, metabolizing nutrients, producing bile for digestion, and regulating blood sugar and cholesterol levels." 
     },
     { 
       id: 4, 
-      position: new Vector3(0, 0.9, 0.2), 
+      position: new Vector3(0, 1, 0), 
       details: "Stomach: A muscular organ that breaks down food using acid and digestive enzymes, initiating the digestion process and facilitating nutrient absorption in the intestines." 
     }
   ];

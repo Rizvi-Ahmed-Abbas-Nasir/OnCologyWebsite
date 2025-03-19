@@ -23,22 +23,22 @@ ChartJS.register(
 );
 
 export default function ChartSection() {
-  const [activeButton, setActiveButton] = useState("weekly");
+  const [activeButton, setActiveButton] = useState("monthly");
   const [chartData, setChartData] = useState([]);
   const containerRef = useRef(null);
 
   useEffect(() => {
-    handleButtonClick("weekly"); // Initialize chart data
+    handleButtonClick("monthly"); 
   }, []);
 
   const handleButtonClick = (range) => {
     setActiveButton(range);
     if (range === "weekly") {
-      setChartData([1200, 1900, 3000, 2500, 2800, 3500, 4100]);
+      setChartData([220, 215, 235, 300, 270, 250, 220]); 
     } else if (range === "monthly") {
-      setChartData([1500, 2500, 3500, 4500, 5500, 6500, 7500, 8500, 9500, 10500, 11500, 12500]);
+      setChartData([2800, 3200, 3500, 3600, 3000, 3200, 3100, 3300, 2800, 3200, 3400, 3100]);
     } else {
-      setChartData([5000, 7000, 6000, 8000, 9000, 10000]);
+      setChartData([17500, 19000, 16000, 18500, 20000, 21000]);
     }
   };
 
@@ -64,7 +64,7 @@ export default function ChartSection() {
         : ["Jan-Jun", "Jul-Dec", "Jan-Jun", "Jul-Dec", "Jan-Jun", "Jul-Dec"],
     datasets: [
       {
-        label: "Sales 2022",
+        label: "Cancer Deaths",
         data: chartData,
         fill: true,
         backgroundColor: "rgba(234, 88, 12, 0.3)",
@@ -84,7 +84,7 @@ export default function ChartSection() {
       },
       tooltip: {
         callbacks: {
-          label: (tooltipItem) => `${tooltipItem.raw} sales`,
+          label: (tooltipItem) => `${tooltipItem.raw} deaths`, 
         },
       },
     },
@@ -96,10 +96,10 @@ export default function ChartSection() {
       },
       y: {
         min: 0,
-        max: 13000,
+        max: 25000, // Adjust the max value for better scaling
         ticks: {
-          stepSize: 1000,
-          callback: (tickValue) => `${tickValue / 1000}k`,
+          stepSize: 500,
+          callback: (tickValue) => `${tickValue}`,
         },
       },
     },
@@ -108,14 +108,12 @@ export default function ChartSection() {
   return (
     <div ref={containerRef} className="chart-container">
       <div className="chart_section">
-        <h3>OnCology </h3>
+        <h3>Cancer-related Deaths</h3>
         <p>
-            <span className="chart-title">People Death's</span>
-          </p>
+          <span className="chart-title">People Death's</span>
+        </p>
 
-        {/* Buttons and Title */}
         <div className="chart-controls">
-
           <div>
             {["weekly", "monthly", "6-month"].map((range) => (
               <button
